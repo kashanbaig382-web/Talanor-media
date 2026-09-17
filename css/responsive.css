@@ -1,0 +1,624 @@
+/* =========================
+   NAVBAR RESPONSIVE
+========================= */
+
+@media (max-width: 850px) {
+
+    .container {
+        width: min(100% - 32px, 1180px);
+    }
+
+
+    .navbar {
+        height: 76px;
+    }
+
+
+    .brand img {
+        width: 145px;
+    }
+
+
+    .nav-cta {
+        display: none;
+    }
+
+    .nav-links {
+        position: absolute;
+        top: 76px;
+        left: 0;
+
+        width: 100%;
+
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+
+        gap: 0;
+
+        padding: 15px 16px 25px;
+
+        background: var(--forest-dark);
+
+        border-bottom: 1px solid rgba(255, 255, 255, .1);
+
+        opacity: 0;
+        visibility: hidden;
+
+        transform: translateY(-10px);
+
+        transition:
+            opacity .3s ease,
+            transform .3s ease,
+            visibility .3s ease;
+    }
+
+    .nav-links.active {
+        opacity: 1;
+        visibility: visible;
+
+        transform: translateY(0);
+    }
+
+    .nav-links a {
+        width: 100%;
+
+        padding: 16px 0;
+
+        border-bottom: 1px solid rgba(255, 255, 255, .07);
+
+        font-size: 14px;
+    }
+
+    .menu-btn {
+        display: block;
+    }
+
+
+    .menu-btn {
+        display: block;
+    }
+
+    .menu-btn {
+        position: relative;
+        z-index: 110;
+    }
+
+    .menu-btn span {
+        transition:
+            transform .3s ease,
+            opacity .3s ease;
+    }
+
+    .menu-btn.active span:first-child {
+        transform: translateY(4px) rotate(45deg);
+    }
+
+    .menu-btn.active span:last-child {
+        transform: translateY(-4px) rotate(-45deg);
+    }
+}
+
+/* =========================
+   HERO RESPONSIVE
+========================= */
+
+@media (max-width: 950px) {
+
+    .hero-grid {
+        grid-template-columns: 1fr;
+
+        padding-top: 70px;
+    }
+
+
+    .hero-content {
+        max-width: 700px;
+    }
+
+
+    .hero-visual {
+        width: 100%;
+
+        max-width: 650px;
+
+        margin: 20px auto 0;
+    }
+
+}
+
+
+@media (max-width: 600px) {
+
+    .hero {
+        min-height: auto;
+    }
+
+
+    .hero-grid {
+        gap: 40px;
+
+        padding-top: 60px;
+        padding-bottom: 60px;
+    }
+
+
+    .hero h1 {
+        font-size: clamp(52px, 15vw, 70px);
+
+        letter-spacing: -1.5px;
+    }
+
+
+    .hero-lead {
+        font-size: 15px;
+    }
+
+
+    .hero-actions {
+        flex-direction: column;
+
+        align-items: stretch;
+    }
+
+
+    .hero-primary,
+    .hero-secondary {
+        width: 100%;
+    }
+
+
+    .hero-pillars {
+        flex-wrap: wrap;
+
+        gap: 18px 0;
+    }
+
+
+    .hero-pillars div {
+        width: 50%;
+
+        padding: 0;
+
+        border: 0;
+    }
+
+
+    .hero-visual {
+        min-height: 500px;
+
+        transform: scale(.9);
+    }
+
+
+    .strategy-card {
+        left: 0;
+    }
+
+
+    .services-card {
+        right: 0;
+    }
+
+
+    .hero-side-text {
+        display: none;
+    }
+
+}
+
+/* =========================
+   ABOUT RESPONSIVE
+========================= */
+
+@media (max-width: 900px) {
+
+    .about-grid {
+        grid-template-columns: 1fr;
+
+        gap: 50px;
+    }
+
+
+    .about-copy {
+        max-width: 600px;
+    }
+
+
+    .about-principles {
+        grid-template-columns: 1fr;
+    }
+
+
+    .principle {
+        min-height: auto;
+
+        padding: 30px 0;
+
+        border-right: 0;
+        border-bottom: 1px solid rgba(16, 35, 31, .18);
+    }
+
+
+    .principle:last-child {
+        border-bottom: 0;
+    }
+
+}
+
+
+@media (max-width: 600px) {
+
+    .about {
+        padding: 75px 0;
+    }
+
+
+    .about-label {
+        margin-bottom: 40px;
+    }
+
+
+    .about-heading h2 {
+        font-size: clamp(45px, 13vw, 62px);
+
+        letter-spacing: -1.5px;
+    }
+
+
+    .about-intro {
+        font-size: 18px;
+    }
+
+
+    .about-principles {
+        margin-top: 60px;
+    }
+
+}
+
+/* =========================
+   SERVICES RESPONSIVE
+========================= */
+
+@media (max-width: 950px) {
+
+    .services-grid {
+        grid-template-columns: 1fr;
+
+        gap: 65px;
+    }
+
+
+    .services-intro>p {
+        max-width: 550px;
+    }
+
+}
+
+
+@media (max-width: 650px) {
+
+    .services {
+        padding: 75px 0;
+    }
+
+
+    .services-label {
+        margin-bottom: 30px;
+    }
+
+
+    .services-intro h2 {
+        font-size: 68px;
+    }
+
+
+    .service-row {
+        min-height: auto;
+
+        grid-template-columns: 35px 1fr 42px;
+
+        gap: 12px;
+
+        padding: 30px 0;
+    }
+
+
+    .service-number {
+        padding-top: 5px;
+    }
+
+
+    .service-content {
+        grid-template-columns: 1fr;
+
+        gap: 18px;
+    }
+
+
+    .service-content h3 {
+        font-size: 31px;
+    }
+
+
+    .service-content>p {
+        max-width: 100%;
+    }
+
+
+    .service-arrow {
+        width: 40px;
+        height: 40px;
+
+        align-self: start;
+    }
+
+
+    .service-row:hover {
+        padding-left: 0;
+    }
+
+}
+
+/* =========================
+   PROCESS RESPONSIVE
+========================= */
+
+@media (max-width: 900px) {
+
+    .process-top {
+        grid-template-columns: 1fr;
+
+        gap: 35px;
+
+        margin-bottom: 70px;
+    }
+
+
+    .process-intro {
+        max-width: 600px;
+    }
+
+
+    .process-timeline {
+        grid-template-columns: repeat(2, 1fr);
+
+        gap: 0;
+    }
+
+
+    .process-timeline::before {
+        display: none;
+    }
+
+
+    .process-step {
+        min-height: 300px;
+
+        padding: 30px;
+
+        border-top: 1px solid rgba(16, 35, 31, .16);
+    }
+
+
+    .process-step:not(:first-child) {
+        padding-left: 30px;
+    }
+
+
+    .step-word,
+    .process-step:not(:first-child) .step-word {
+        left: 30px;
+        bottom: 30px;
+    }
+
+}
+
+
+@media (max-width: 600px) {
+
+    .process {
+        padding: 75px 0;
+    }
+
+
+    .process-top h2 {
+        font-size: clamp(48px, 13vw, 65px);
+
+        letter-spacing: -1.5px;
+    }
+
+
+    .process-timeline {
+        grid-template-columns: 1fr;
+    }
+
+
+    .process-step {
+        min-height: auto;
+
+        padding: 35px 0 65px;
+
+        border-right: 0;
+    }
+
+
+    .process-step:not(:first-child) {
+        padding-left: 0;
+    }
+
+
+    .step-head {
+        height: 55px;
+    }
+
+
+    .process-step h3 {
+        margin-top: 20px;
+
+        font-size: 40px;
+    }
+
+
+    .process-step>p {
+        max-width: 350px;
+    }
+
+
+    .step-word,
+    .process-step:not(:first-child) .step-word {
+        left: 0;
+        bottom: 25px;
+    }
+
+}
+
+/* =========================
+   WORK RESPONSIVE
+========================= */
+
+@media (max-width: 900px) {
+
+    .work-top {
+        grid-template-columns: 1fr;
+
+        gap: 35px;
+    }
+
+
+    .work-top-right>p {
+        max-width: 600px;
+    }
+
+
+    .project-large .project-image {
+        height: 500px;
+    }
+
+
+    .project-tall {
+        margin-top: 50px;
+    }
+
+}
+
+
+@media (max-width: 650px) {
+
+    .work {
+        padding: 75px 0;
+    }
+
+
+    .work-top {
+        margin-bottom: 55px;
+    }
+
+
+    .work-top h2 {
+        font-size: clamp(48px, 13vw, 64px);
+
+        letter-spacing: -1.5px;
+    }
+
+
+    .work-grid {
+        grid-template-columns: 1fr;
+
+        gap: 45px;
+    }
+
+
+    .project-large {
+        grid-row: auto;
+    }
+
+
+    .project-tall {
+        margin-top: 0;
+    }
+
+
+    .project-large .project-image,
+    .project-tall .project-image,
+    .project-small .project-image {
+        height: 420px;
+    }
+
+
+    .project-info h3 {
+        font-size: 23px;
+    }
+
+}
+
+/* =========================
+   CTA + FOOTER RESPONSIVE
+========================= */
+
+@media (max-width: 900px) {
+
+    .cta-content {
+        grid-template-columns: 1fr;
+
+        gap: 35px;
+    }
+
+
+    .footer-main {
+        grid-template-columns: 1.2fr 1fr;
+
+        gap: 55px;
+    }
+
+}
+
+
+@media (max-width: 600px) {
+
+    .final-cta {
+        padding: 70px 0;
+    }
+
+
+    .cta-box {
+        padding: 45px 28px;
+    }
+
+
+    .cta-content h2 {
+        font-size: clamp(45px, 12vw, 60px);
+
+        letter-spacing: -1px;
+    }
+
+
+    .cta-button {
+        width: 100%;
+    }
+
+
+    .footer {
+        padding-top: 60px;
+    }
+
+
+    .footer-main {
+        grid-template-columns: 1fr;
+
+        gap: 40px;
+
+        padding-bottom: 50px;
+    }
+
+
+    .footer-bottom {
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        gap: 10px;
+    }
+
+}
